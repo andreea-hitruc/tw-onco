@@ -1,0 +1,101 @@
+body{
+	padding:0;
+	margin:0;
+}
+
+.div-clear{
+	clear:both;
+}
+
+header{
+	background:#3498db;
+	padding:1px 0 1px 0;
+	position:fixed;
+	width:100%;
+}
+
+header nav ul{
+	padding: 2px 5px 2px 5px;
+	margin:0;
+	color:#fff;
+}
+
+header nav li{
+	float:left;
+	padding: 5px 15px 5px 15px;
+	list-style:none;
+	cursor:pointer;
+}
+
+header nav li a{
+	color:#fff;
+	text-decoration:none;
+}
+
+header nav li a:hover{
+	color:#ecf0f1;
+}
+
+section{
+	padding:35px 15px 15px 15px;
+}
+
+.loginBox{
+	width:160px;
+	margin:auto;
+	margin-top:20%;
+	border:1px #ccc dotted;
+	padding:15px;
+}
+
+.loginBox .error{
+	color:red;
+	padding-top:5px;
+}
+
+.card{
+	width:200px;
+	height:300px;
+	padding:15px;
+	border:1px #ccc solid;
+	margin: 15px 15px 0 0;
+	float:left;
+}
+
+.card img{
+	margin-left:25px;
+	width:150px;
+	height:150px;
+}
+
+.card h4{
+	margin:0;
+	padding:5px 0 5px 0;
+}
+
+.register{
+	width:280px;
+	margin:auto;
+	border:1px #ccc dotted;
+	padding:10px;
+	margin-top:10%;
+}
+
+.register p.error{
+	color:red;
+}
+
+.register .row{
+	clear:both;
+}
+
+.register input[type=text],
+.register input[type=password]{
+	float:right;
+}
+
+@media (max-width:370px){
+	header{
+		position:relative;
+	}
+}
