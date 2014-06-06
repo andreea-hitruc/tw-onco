@@ -29,7 +29,7 @@ body{
 	color:#fff;
 	width:100%;
 	min-height:90px;
-	background:#02ab68;
+	background:#383d48;
 }
 
 .header .logo{
@@ -51,16 +51,20 @@ body{
 	color:#fff;
 	text-decoration:none;
 	text-transform:uppercase;
+	border: 1px solid #383d48;
+	border-radius:3px;
+	padding:8px 8px 8px 8px;
 }
 
 .header .nav li a:hover{
-	color:#bdc3c7;
+	color:#fff;
+	background-color:#99CCFF;
 }
 
 .paralax{
 	width:100%;
 	height:90px;
-	background:url('../images/paralax_bg.jpg') top center fixed no-repeat;
+	background:url('../images/telephone-bk.png') top center fixed;
 }
 
 
@@ -69,7 +73,7 @@ body{
 }
 
 .section h2{
-	border-bottom:4px solid #02ab68;
+	border-bottom:4px solid #336699;
 	float:left;
 	padding-bottom:5px;
 }
@@ -82,12 +86,13 @@ body{
 	width:200px;
 	height:300px;
 	border:1px solid #ccc;
+	border-radius:3px;
 	margin: 0 4px 10px 4px;
 	float:left;
 }
 
 .contact-box a{
-	color:#fff;
+	color:#383d48;
 	text-decoration:none;
 	float:right;
 	margin:3px 3px 0 0;
@@ -96,10 +101,14 @@ body{
 #photo_preview{
 	width:150px;
 	float:right;
+	
 }
 
 #photo_preview img{
 	width:150px;
+}
+img{
+	border-radius:50%;
 }
 
 .contact-box a.delete:before{
@@ -112,8 +121,8 @@ body{
 }
 
 .contact-box h4{
-	background:#02ab68;
-	color:#fff;
+	background:#99CCFF;
+	color:#383d48;
 	margin:0;
 	padding:8px 1px 8px 1px;
 }
@@ -125,7 +134,7 @@ body{
 
 
 .footer{
-	background:#02ab68;
+	background:#383d48;
 	color:#fff;
 	padding:20px 0 20px 0;
 }
@@ -143,7 +152,7 @@ body{
 
 .register h2,
  .loginBox h2{
-	background:#02ab68;
+	background:#383d48;
 	color:#fff;
 	margin:0;
 	padding:8px 1px 8px 1px;
@@ -176,7 +185,14 @@ body{
 .register .row{
 	clear:both;
 }
-
+input{
+	border-radius:3px;
+}
+.button-style{
+	font-family:"Awesome";
+	font-size:14px;
+	cursor:pointer;
+}
 .register input[type=text],
 .register input[type=password]{
 	float:right;
