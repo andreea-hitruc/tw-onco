@@ -7,13 +7,13 @@ if(!$user->is_logged_in()){
 }
 
 $xCard = new xCard('data/xCards/'.$user->data['uid'].'.xml');
-$cardf = $xCard->get_cards();
+$cardf = $xCard->get_cards();//array care selecteaza toate contactele
 
 $pageTitle='Edit contact';
 
 $edit = true;
- if(!empty($_POST)){//daca s-a dat submit la formularul de adaugare cream un nou contact
- $idUser= $_POST['idUserTextBox'];
+ if(!empty($_POST)){//daca s-a dat submit la formularul de edit,eitam contactul dorit
+ $idUser= $_POST['idUserTextBox'];//hidden input primeste valoarea prin post 
 			foreach($cardf as $card)
 			{
 				if($idUser == $card->getElementsByTagName('uid')->item(0)->getElementsByTagName('uri')->item(0)->nodeValue)
@@ -24,8 +24,8 @@ $edit = true;
 					$card->getElementsByTagName('n')->item(0)->getElementsByTagName('surname')->item(0)->nodeValue = $_POST['nume'];
 					$card->getElementsByTagName('n')->item(0)->getElementsByTagName('given')->item(0)->nodeValue = $_POST['prenume'];
 					$card->getElementsByTagName('tel')->item(0)->getElementsByTagName('uri')->item(0)->nodeValue = $_POST['tel'];
-					$card->getElementsByTagName('email')->item(0)->getElementsByTagName('text')->item(1)->nodeValue = $_POST['email'];
-					$card->getElementsByTagName('adr')->item(0)->getElementsByTagName('text')->item(1)->nodeValue = $_POST['addr'];
+					$card->getElementsByTagName('email')->item(0)->getElementsByTagName('text')->item(0)->nodeValue = $_POST['email'];
+					$card->getElementsByTagName('adr')->item(0)->getElementsByTagName('text')->item(0)->nodeValue = $_POST['addr'];
 					$xCard->save($xCard);
 					header('Location: '.$BASE_URL.'#'.$uid);//redirectionam utilizatorul catre contactactul nou creat
 				}
